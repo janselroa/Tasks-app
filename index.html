@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script sync src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Tasks app</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="nav">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/mistareas.html">Mis Tareas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1 class="text-center texto-fino">Tasks App</h1>
+        <div class="tasks-app">
+            <div class="create-tasks">
+                <h2 class="text-center texto-fino">New Tasks</h2>
+                <input type="text" placeholder="Title" v-model="newTask.title">
+                <input type="text" v-model="newTask.image" placeholder="Ingrese la direccion de la imagen">
+                <textarea placeholder="Description" v-model="newTask.description"></textarea>
+                <button @click="addTasks" class="btn-create">Create Tasks</button>
+            </div>
+            <div class="tasks">
+                <article class="tasks__article" v-for="task in listTasks">
+                    <h2 class="text-center">{{task.title}}</h2>
+                    <img class="tasks-image" v-if="task.image" :src="task.image">
+                    <p>{{task.description}}</p>
+                    <button @click="deleteTask" class="btn-delete">Delete</button>
+                    <button class="btn-edit">Edit</button>
+                </article>
+            </div>
+        </div>
+        <footer class="footer">
+            <img class="logo" src="img/logo.jpg" alt="Jansel Roa">
+            <a target="_blank" href="https://github.com/janselroa"><img src="img/icon-github.png"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jansel-roa-7907251b0/"><img src="img/icon-linkedin.png"></a>
+        </footer>
+    </div>
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>
