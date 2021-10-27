@@ -6,7 +6,7 @@ new Vue({
         }
     },
     data: {
-        listTasks: [{ title: "Example", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum quos eos earum voluptates necessitatibus cum quis ex sequi dolores hic magnam, unde inventore nostrum officia nobis, beatae repellat atque!", image: "/assets/img/example.jpg" }, { title: "Example", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum quos eos earum voluptates necessitatibus cum quis ex sequi dolores hic magnam, unde inventore nostrum officia nobis, beatae repellat atque!", image: "/assets/img/example2.jpg" }],
+        listTasks: [{ title: "Example", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum quos eos earum voluptates necessitatibus cum quis ex sequi dolores hic magnam, unde inventore nostrum officia nobis, beatae repellat atque!", image: "./assets/img/example.jpg" }, { title: "Example", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rerum quos eos earum voluptates necessitatibus cum quis ex sequi dolores hic magnam, unde inventore nostrum officia nobis, beatae repellat atque!", image: "./assets/img/example2.jpg" }],
         newTask: {},
         find: "",
     },
